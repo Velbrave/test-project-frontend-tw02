@@ -1,0 +1,107 @@
+.login {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: grid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 280px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ededed;
+  border-radius: 4px;
+  border: 2px solid #d3d3d3;
+}
+.input::placeholder {
+  color: #000000;
+}
+
+.text {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+  border-color: blue;
+}
+
+.button:hover {
+  color: darkblue;
+  border-color: blue;
+  background-color: azure;
+}
+
+@media screen and (min-width: 768px) {
+  .login {
+    margin-bottom: 30px;
+  }
+
+  .button {
+    width: 120px;
+    font-size: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 40px;
+  }
+
+  .input {
+    width: 500px;
+    height: 55px;
+    font-size: 25px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .text {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .login {
+    margin-bottom: 40px;
+  }
+
+  .button {
+    width: 140px;
+    font-size: 22px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 50px;
+  }
+  .input {
+    width: 800px;
+    height: 65px;
+    font-size: 30px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 25px;
+  }
+}

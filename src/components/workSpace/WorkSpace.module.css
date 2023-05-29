@@ -1,0 +1,18 @@
+.workSpace {
+  display: flow-root;
+  width: 100%;
+  height: 510px;
+  background-color: #2f4f4f;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .workSpace {
+    height: 480px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .workSpace {
+    height: 546px;
+  }
+}

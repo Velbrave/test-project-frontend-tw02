@@ -1,0 +1,13 @@
+.hour {
+  width: 130px;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #ffffff;
+}
+
+.text {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,46 @@
+.label {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input {
+  width: 248px;
+  height: 46px;
+  padding-left: 14px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  background-color: #ededed;
+}
+.input::placeholder {
+  color: #000000;
+}
+
+@media screen and (min-width: 468px) {
+  .input {
+    width: 200px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    margin-right: 20px;
+  }
+
+  .input {
+    width: 250px;
+    height: 34px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .label {
+    margin-right: 26px;
+  }
+
+  .input {
+    width: 300px;
+    height: 38px;
+  }
+}
