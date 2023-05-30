@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUserDataThunk } from '../../redux/auth/authThunk';
 import { lazy, Suspense, useEffect } from 'react';
 import PageNotFound from '../../page/PageNotFound/PageNotFound';
-// import css from './App.module.css';
+import { fetchTweets } from '../../redux/tweets/tweetThunk';
+import { authToken } from '../../redux/selectors';
 
 const Home = lazy(() => import('../../page/Home/Home'));
 const Register = lazy(() => import('../../page/Register/Register'));
@@ -14,12 +15,13 @@ const Tweets = lazy(() => import('../../page/Tweets/Tweets'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const token = useSelector(state => state.auth.token);
+  const token = useSelector(authToken);
 
   useEffect(() => {
     if (!token) return;
 
     dispatch(getUserDataThunk());
+    dispatch(fetchTweets());
   }, [token, dispatch]);
 
   return (

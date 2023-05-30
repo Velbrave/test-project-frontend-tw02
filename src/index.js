@@ -9,13 +9,13 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter basename="/test-project-frontend-tw02">
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistore}>
-          <App />
-        </PersistGate>
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter basename="/test-project-frontend-tw02">
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistore}>
+        <App />
+      </PersistGate>
+    </Provider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );

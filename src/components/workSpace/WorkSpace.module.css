@@ -1,4 +1,6 @@
 .workSpace {
+  position: relative;
+  overflow-y: scroll;
   display: flow-root;
   width: 100%;
   height: 510px;

@@ -1,6 +1,23 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { token } from '../../http/https';
-import { login, logout, getUserData } from '../../service/usersService';
+import {
+  register,
+  login,
+  logout,
+  getUserData,
+} from '../../service/usersService';
+
+export const RegisterThunk = createAsyncThunk(
+  'auth/register',
+  async (body, { rejectWithValue }) => {
+    try {
+      const data = await register(body);
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
 
 export const LoginThunk = createAsyncThunk(
   'auth/login',
@@ -29,7 +46,7 @@ export const LogoutThunk = createAsyncThunk(
 );
 
 export const getUserDataThunk = createAsyncThunk(
-  'auth/getData',
+  'auth/current',
   async (_, { rejectWithValue, getState }) => {
     try {
       const saveToken = getState().auth.token;

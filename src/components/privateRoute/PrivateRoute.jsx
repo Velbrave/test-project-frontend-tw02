@@ -4,8 +4,7 @@ import { authData } from '../../redux/selectors';
 
 const PrivateRoute = () => {
   const data = useSelector(authData);
-  // return data ? <Outlet /> : <Navigate to="/login" />;
-  return data ? <Navigate to="/login" /> : <Outlet />;
+  return data ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;

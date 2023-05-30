@@ -4,7 +4,6 @@ import { register } from '../../service/usersService';
 import css from './Register.module.css';
 
 const initialState = {
-  name: '',
   email: '',
   password: '',
 };

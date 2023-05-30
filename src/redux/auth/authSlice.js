@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { LoginThunk, LogoutThunk, getUserDataThunk } from './authThunk';
+import {
+  LoginThunk,
+  LogoutThunk,
+  RegisterThunk,
+  getUserDataThunk,
+} from './authThunk';
 import { STATUS } from '../status';
 
 const initialState = {
@@ -13,6 +18,16 @@ const authSlice = createSlice({
   initialState,
   extraReducers: builder => {
     builder
+      .addCase(RegisterThunk.pending, state => {
+        state.status = STATUS.Loading;
+      })
+      .addCase(RegisterThunk.fulfilled, (state, action) => {
+        state.status = STATUS.Resolved;
+        state.data = action.payload.user;
+      })
+      .addCase(RegisterThunk.rejected, (state, action) => {
+        state.status = STATUS.Rejected;
+      })
       .addCase(LoginThunk.pending, state => {
         state.status = STATUS.Loading;
       })
@@ -48,4 +63,5 @@ const authSlice = createSlice({
   },
 });
 
+export const authReducer = authSlice.reducer;
 export default authSlice.reducer;
