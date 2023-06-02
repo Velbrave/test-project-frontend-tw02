@@ -36,6 +36,7 @@ export const Login = () => {
             value={values.email}
             onChange={handleChange}
             placeholder="Email"
+            required
           />
         </label>
 
@@ -47,6 +48,7 @@ export const Login = () => {
             value={values.password}
             onChange={handleChange}
             placeholder="Password"
+            required
           />
         </label>
         <p className={css.text}>

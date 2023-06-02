@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBox from '../searchBox/SearchBox';
 import LastHour from '../lastHour/LastHour';
-import TweetItem from '../tweetItem/TweetItem';
+import TestEvent from '../test/TestEvent';
 import css from './WorkSpace.module.css';
 
 function WorkSpace() {
@@ -9,7 +9,7 @@ function WorkSpace() {
     <div className={css.workSpace}>
       <LastHour />
       <SearchBox />
-      <TweetItem />
+      <TestEvent />
     </div>
   );
 }

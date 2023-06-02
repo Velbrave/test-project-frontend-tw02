@@ -5,6 +5,7 @@ import { getTweets } from '../../redux/selectors';
 
 function LastHour() {
   const todo = useSelector(getTweets);
+
   return (
     <div className={css.hour}>
       <p className={css.text}>Tweets (last hour)</p>
